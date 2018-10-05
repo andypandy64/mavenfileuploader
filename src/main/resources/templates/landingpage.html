@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing page</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/style/main.css}"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <img class="logo" src="/assets/logo.png" alt="">
+    <form method="POST" enctype="multipart/form-data" action="/newfile">
+        <input id="file" type="file" name="file" onchange="this.form.submit()">
+        <div class="formHelper">
+            <label for="file" />choose a file</label>
+        </div>
+    </form>
+</div>
+</body>
+</html>

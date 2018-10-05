@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<link rel="stylesheet" type="text/css" th:href="@{/style/main.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/style/uploads.css}"/>
+
+<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Uploads</title>
+
+</head>
+<body>
+    <a href="/" class="logoLink"><img class="logo" src="/assets/logo.png" alt=""></a>
+<div class="container">
+    <div th:if="${fileEncoded != null}" class="viewAllFiles"><a href="/uploads"><h2>View All Files</h2></a></div>
+    <div class="center">
+    <ul th:if="${not #lists.isEmpty(uploads)}">
+        <th:block th:each="upload : ${uploads}">
+            <li><a th:href="@{'/uploads/' + ${upload.uploadName}}" th:text="${upload.uploadName}"></a><div th:text="${upload.file.getContentType()}" class="fileType" /></li>
+        </th:block>
+    </ul>
+    <div th:if="${fileEncoded != null}" th:remove="tag" th:utext="${embed}"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+body {
+    background: url("../assets/background.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 800px) 1fr;
+    padding-top: 2rem;
+}
+
+.logo {
+    grid-column: 2;
+    max-width: 100%;
+    margin-top: 10rem;
+}
+
+form {
+    grid-column: 2;
+    padding: 3rem;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+[type="file"] {
+    display: none;
+}
+
+.formHelper {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    background: none;
+    border: 2px solid #53A6BA;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .5s;
+}
+
+label:hover {
+    background: #53A6BA;
+}
+
+
+
+.logoLink {
+    display:inline-block;
+    height: 60px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.logoLink img {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.viewAllFiles {
+    grid-row: 1;
+    grid-column: 2;
+    text-align: center;
+}
+
+.viewAllFiles a {
+    display: inline-block;
+    color: #FA8614;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.viewAllFiles a:hover {
+    color: white;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Lobster', cursive;
+}
+
+.center {
+    grid-column: 2;
+    grid-row: 2;
+    max-width: 800px;
+    padding: 1rem;
+    border: 2px solid #FA8614;
+    display: flex;
+    justify-content: center;
+}
+
+.center > * {
+    align-self: center;
+}
+
+ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+li {
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: .5rem;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .5s;
+}
+
+li a:hover {
+    color: #53A6BA;
+}
+
+.fileType {
+    display: inline-block !important;
+    color: #53A6BA;
+}
+
+p {
+    background: #C8C5C7;
+    color: #121417;
+    padding: 1rem;
+}
